@@ -30,7 +30,7 @@ let TheactAuthenticated:actAuthenticated in
 let AptStringMessageForTheactAuthenticated:ptString in
 self.rnActor.rnSystem = TheSystem and self.rnActor = TheactAuthenticated
 /* PostF01 */
-AptStringMessageForTheactAuthenticated.eq('Your biometric info succesfuly updated') and TheactAuthenticated.rnInterfaceIN ^ieMessage(AptStringMessageForTheactAuthenticated)
+AptStringMessageForTheactAuthenticated.eq('Your biometric info successfully updated') and TheactAuthenticated.rnInterfaceIN ^ieMessage(AptStringMessageForTheactAuthenticated)
 
 }
 postP {
