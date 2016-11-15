@@ -39,7 +39,7 @@ package icrash.concepts.primarytypes.datatypes {
 			datatype dtCoordStatistic {
 				attribute coordId:dtCoordinatorID
 				attribute coordState:ptString
-				attribute coordTime:dtMinute
+				attribute coordTime:dtTime
 				operation is():ptBoolean
 			}
 			datatype dtGPSLocation {
