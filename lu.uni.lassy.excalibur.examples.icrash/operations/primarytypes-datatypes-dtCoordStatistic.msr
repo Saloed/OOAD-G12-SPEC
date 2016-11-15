@@ -10,7 +10,7 @@ package icrash.operations.concepts.primarytypes.datatypes.dtCoordStatistic {
 
 		operation: icrash.concepts.primarytypes.datatypes.dtCoordStatistic.is():ptBoolean {
 			postF {
-				let TheResult:ptBoolean in(if(AdtValue.coordId.is() and(AdtValue.coordTime.hour.value >= 0 or AdtValue.coordTime.minute.value >= 0 or AdtValue.coordTime.second.value >= 0))
+				let TheResult:ptBoolean in(if(AdtValue.coordId.is() and(AdtValue.coordTime.hour.value.geq(0) or AdtValue.coordTime.minute.value.geq(0) or AdtValue.coordTime.second.value.geq(0)))
 				then(TheResult = true)
 				else(TheResult = false)
 				endif result = TheResult)
