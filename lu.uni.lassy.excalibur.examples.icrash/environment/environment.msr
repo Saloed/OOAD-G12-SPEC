@@ -29,7 +29,7 @@ import lu.uni.lassy.messir.libraries.calendar
 
 			output interface outactAdministrator{
 				
-				operation oeUpdateTimingStatistic():ptBoolean
+				operation oeUpdateTimingStatistic(AdtCoordStatistic: dtCoordStatistic):ptBoolean
 				
 				operation oeAddCoordinator(
 											AdtCoordinatorID:dtCoordinatorID ,

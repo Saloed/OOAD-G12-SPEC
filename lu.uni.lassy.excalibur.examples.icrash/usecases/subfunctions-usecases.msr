@@ -52,7 +52,7 @@ import icrash.environment
     actor actMsrCreator[primary,active]
   }
   //----------------------------------------------------
-  use case system subfunction oeUpdateTimingStatistic() {
+  use case system subfunction oeUpdateTimingStatistic(AdtCoordStatistic: dtCoordStatistic) {
     actor actAdministrator[primary,passive]
     returned messages {
       ieTimeStatisticUpdated() returned to actAdministrator
