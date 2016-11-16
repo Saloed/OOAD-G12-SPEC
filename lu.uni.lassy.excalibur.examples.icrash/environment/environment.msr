@@ -28,9 +28,7 @@ import lu.uni.lassy.messir.libraries.calendar
 			operation init():ptBoolean
 
 			output interface outactAdministrator{
-				
-				operation oeUpdateTimingStatistic(AdtCoordStatistic: dtCoordStatistic):ptBoolean
-				
+								
 				operation oeAddCoordinator(
 											AdtCoordinatorID:dtCoordinatorID ,
 											AdtLogin:dtLogin , 
@@ -41,7 +39,7 @@ import lu.uni.lassy.messir.libraries.calendar
 			}
 			
 			input interface inactAdministrator{
-				operation ieTimeStatisticUpdated():ptBoolean
+				operation ieTimeStatisticUpdated(AdtCoordStatistic: dtCoordStatistic):ptBoolean
 				operation ieCoordinatorAdded():ptBoolean
 				operation ieCoordinatorDeleted():ptBoolean
 	 		}

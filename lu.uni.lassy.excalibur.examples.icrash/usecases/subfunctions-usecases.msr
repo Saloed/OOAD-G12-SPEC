@@ -51,13 +51,6 @@ import icrash.environment
   use case system subfunction oeCreateSystemAndEnvironment(AqtyComCompanies:ptInteger) {
     actor actMsrCreator[primary,active]
   }
-  //----------------------------------------------------
-  use case system subfunction oeUpdateTimingStatistic(AdtCoordStatistic: dtCoordStatistic) {
-    actor actAdministrator[primary,passive]
-    returned messages {
-      ieTimeStatisticUpdated() returned to actAdministrator
-    }
-  } 
 //----------------------------------------------------
   use case system subfunction oeDeleteCoordinator(AdtCoordinatorID:dtCoordinatorID) {
     actor actAdministrator[primary,active]

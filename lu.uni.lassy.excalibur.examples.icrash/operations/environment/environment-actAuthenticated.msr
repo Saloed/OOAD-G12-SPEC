@@ -67,11 +67,24 @@ let TheSystem:ctState in
 let TheactAuthenticated:actAuthenticated in
 let AptStringMessageForTheactAuthenticated:ptString in
 let AptStringMessageForTheactAdministrator:ptString in
+let AcoordStatisticUpdate: dtCoordStatistic in
 self.rnActor.rnSystem = TheSystem and self.rnActor = TheactAuthenticated and
 /* PostF01 */
-if(TheactAuthenticated.rnctAuthenticated.login = AdtLogin and TheactAuthenticated.rnctAuthenticated.bio = AdtBiometric)
-then(AptStringMessageForTheactAuthenticated.eq('You are logged ! Welcome ...') and TheactAuthenticated.rnInterfaceIN ^ieMessage(AptStringMessageForTheactAuthenticated))
-else(AptStringMessageForTheactAuthenticated.eq('Wrong identification information ! Please try again ...') and TheactAuthenticated.rnInterfaceIN ^ieMessage(AptStringMessageForTheactAuthenticated) and AptStringMessageForTheactAdministrator.eq('Intrusion tentative !') and TheSystem.rnactAdministrator.rnInterfaceIN ^ieMessage(AptStringMessageForTheactAdministrator))
+if(
+	TheactAuthenticated.rnctAuthenticated.pwd = AdtPassword 
+	and TheactAuthenticated.rnctAuthenticated.login = AdtLogin
+)
+then(
+	AptStringMessageForTheactAuthenticated.eq('You are logged ! Welcome ...') 
+	and TheactAuthenticated.rnInterfaceIN ^ieMessage(AptStringMessageForTheactAuthenticated)
+	 and TheSystem.rnactAdministrator.rnInterfaceIN ^ieTimeStatisticUpdated(AcoordStatisticUpdate)
+)
+else(
+	AptStringMessageForTheactAuthenticated.eq('Wrong identification information ! Please try again ...') 
+	and TheactAuthenticated.rnInterfaceIN ^ieMessage(AptStringMessageForTheactAuthenticated) 
+	and AptStringMessageForTheactAdministrator.eq('Intrusion tentative !')
+	 and TheSystem.rnactAdministrator.rnInterfaceIN ^ieMessage(AptStringMessageForTheactAdministrator)
+)
 endif
 
 }
@@ -112,11 +125,24 @@ let TheSystem:ctState in
 let TheactAuthenticated:actAuthenticated in
 let AptStringMessageForTheactAuthenticated:ptString in
 let AptStringMessageForTheactAdministrator:ptString in
+let AcoordStatisticUpdate: dtCoordStatistic in
 self.rnActor.rnSystem = TheSystem and self.rnActor = TheactAuthenticated and
 /* PostF01 */
-if(TheactAuthenticated.rnctAuthenticated.pwd = AdtPassword and TheactAuthenticated.rnctAuthenticated.login = AdtLogin)
-then(AptStringMessageForTheactAuthenticated.eq('You are logged ! Welcome ...') and TheactAuthenticated.rnInterfaceIN ^ieMessage(AptStringMessageForTheactAuthenticated))
-else(AptStringMessageForTheactAuthenticated.eq('Wrong identification information ! Please try again ...') and TheactAuthenticated.rnInterfaceIN ^ieMessage(AptStringMessageForTheactAuthenticated) and AptStringMessageForTheactAdministrator.eq('Intrusion tentative !') and TheSystem.rnactAdministrator.rnInterfaceIN ^ieMessage(AptStringMessageForTheactAdministrator))
+if(
+	TheactAuthenticated.rnctAuthenticated.pwd = AdtPassword 
+	and TheactAuthenticated.rnctAuthenticated.login = AdtLogin
+)
+then(
+	AptStringMessageForTheactAuthenticated.eq('You are logged ! Welcome ...') 
+	and TheactAuthenticated.rnInterfaceIN ^ieMessage(AptStringMessageForTheactAuthenticated)
+	 and TheSystem.rnactAdministrator.rnInterfaceIN ^ieTimeStatisticUpdated(AcoordStatisticUpdate)
+)
+else(
+	AptStringMessageForTheactAuthenticated.eq('Wrong identification information ! Please try again ...') 
+	and TheactAuthenticated.rnInterfaceIN ^ieMessage(AptStringMessageForTheactAuthenticated) 
+	and AptStringMessageForTheactAdministrator.eq('Intrusion tentative !')
+	 and TheSystem.rnactAdministrator.rnInterfaceIN ^ieMessage(AptStringMessageForTheactAdministrator)
+)
 endif
 
 }

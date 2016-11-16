@@ -13,6 +13,13 @@ import icrash.environment
 Operation Model {
 
 operation: actCoordinator.outactCoordinator.oeSetCrisisHandler(AdtCrisisID:dtCrisisID):ptBoolean{
+	
+postF {
+let TheSystem:ctState in
+let AcoordStatisticUpdate: dtCoordStatistic in
+TheSystem.rnactAdministrator.rnInterfaceIN ^ieTimeStatisticUpdated(AcoordStatisticUpdate)
+}
+	
 prolog{"src/Operations/Environment/OUT/outactCoordinator-oeSetCrisisHandler.pl"}
 }
 
