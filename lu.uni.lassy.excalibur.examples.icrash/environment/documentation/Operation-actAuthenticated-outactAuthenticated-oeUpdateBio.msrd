@@ -1,0 +1,38 @@
+/*
+@author admin
+@date Wed Nov 16 23:41:33 MSK 2016
+*/
+
+
+@@Operation
+icrash.environment.actAuthenticated.outactAuthenticated.oeUpdateBio
+//parameters
+@parameter
+icrash.environment.actAuthenticated.outactAuthenticated.oeUpdateBio.AdtLogin
+"login of actor which request an update of biometric information"
+@parameter
+icrash.environment.actAuthenticated.outactAuthenticated.oeUpdateBio.AdtBiometric
+"new biometric information of actor"
+@endParameters
+
+@description "updates biometric information for current actor "
+//preProtocol descriptions
+@preP
+"the system is started"
+@preP
+"the actor is currently logged in ! (i.e. the associated ctAuthenticated instance is considered logged)"
+@endPreP
+//preFunctional descriptions
+@preF
+" "
+@endPreF
+//postFunctional descriptions
+@postF 
+" "
+@endPostF
+//postProtocol descriptions
+@postP 
+" "
+@endPostP
+//example
+@example"the biometric information of current actor is updated ! (i.e. new value of field 'bio' in the associated ctAuthenticated instance) "

@@ -1,0 +1,15 @@
+/*
+@author admin
+@date Wed Nov 16 15:20:32 MSK 2016
+*/
+
+
+@@Operation
+icrash.concepts.primarytypes.datatypes.dtBiometric.is
+@description "use to determine validity of biometric information"
+//postFunctional descriptions
+@postF 
+"true if length on the byte array value is less or equals 100 "
+@endPostF
+//example
+@example" "

@@ -1,0 +1,22 @@
+/*
+@author admin
+@date Wed Nov 16 15:10:34 MSK 2016
+*/
+
+
+@@Primary Type Datatype icrash.concepts.primarytypes.datatypes.dtCoordStatistic
+@description "store coordinator timing statistic"
+@attribute
+icrash.concepts.primarytypes.datatypes.dtCoordStatistic.coordId
+"Id of the coordinator"
+@attribute
+icrash.concepts.primarytypes.datatypes.dtCoordStatistic.coordState
+"State of the coordinator (free,handle...)"
+@attribute
+icrash.concepts.primarytypes.datatypes.dtCoordStatistic.coordTime
+"Time of the last coordinator's state change"
+@endAttributes
+@operation
+icrash.concepts.primarytypes.datatypes.dtCoordStatistic.is
+"determine validity of coordinator timing statistic"
+@endOperations

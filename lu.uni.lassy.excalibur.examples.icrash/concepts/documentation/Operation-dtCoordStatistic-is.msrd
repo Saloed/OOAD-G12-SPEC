@@ -1,0 +1,15 @@
+/*
+@author admin
+@date Wed Nov 16 23:26:29 MSK 2016
+*/
+
+
+@@Operation
+icrash.concepts.primarytypes.datatypes.dtCoordStatistic.is
+@description "use to determine validity of coordinator timing statistic information"
+//postFunctional descriptions
+@postF 
+"true if coordinator ID is valid and time of coordinator status change is valid"
+@endPostF
+//example
+@example" "

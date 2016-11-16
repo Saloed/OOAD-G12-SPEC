@@ -1,0 +1,12 @@
+/*
+@author admin
+@date Wed Nov 16 14:50:27 MSK 2016
+*/
+
+
+@@Primary Type Datatype icrash.concepts.primarytypes.datatypes.dtBiometric
+@description "a data type using to store user biometric information"
+@operation
+icrash.concepts.primarytypes.datatypes.dtBiometric.is
+"determine validity of biometric information"
+@endOperations
