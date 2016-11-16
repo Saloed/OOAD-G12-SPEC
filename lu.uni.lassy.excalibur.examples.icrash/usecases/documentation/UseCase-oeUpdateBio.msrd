@@ -1,0 +1,27 @@
+/*
+@author admin
+@date Thu Nov 17 01:05:25 MSK 2016
+*/
+
+
+@@Use Case Subfunction icrash.usecases.subfunctions.oeUpdateBio
+@description "goal update biometric information of actAuthenticated"
+@parameter icrash.usecases.subfunctions.oeUpdateBio.AdtLogin ""
+@parameter icrash.usecases.subfunctions.oeUpdateBio.AdtBiometric ""
+@endParameters
+@protocolCondition
+"
+"
+@endProtocolConditions
+@preCondition
+"
+"
+@endPreConditions
+@postCondition
+"
+"
+@endPostConditions
+@additionalInformation
+"
+none
+"

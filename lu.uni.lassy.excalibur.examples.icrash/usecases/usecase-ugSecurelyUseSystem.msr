@@ -11,15 +11,25 @@ use case system usergoal
 	actor actAuthenticated[primary,active]
 
 	reuse oeLogin[1..1]
+	reuse oeBioLogin[1..1]
 	reuse oeLogout[1..1]
-
-	step a: actAuthenticated 
+	reuse oeUpdateBio[1..*]
+	
+	step a1: actAuthenticated 
 	     executes oeLogin
-	step b: actAuthenticated 
+	step a2: actAuthenticated
+		 executes oeBioLogin
+	step b: actAuthenticated
+		executes oeUpdateBio
+	step c: actAuthenticated 
 	     executes oeLogout
 	
 	ordering constraint 
-	 "step (a) must always precede step (b)."
+	 "step (a1) or (a2) must always precede step (c)."
+	 ordering constraint 
+	 "step (a1) or (a2) must always precede step (b)."
+	 ordering constraint 
+	 "step (b) can be executed multiple times."
 		}
 	}
 }

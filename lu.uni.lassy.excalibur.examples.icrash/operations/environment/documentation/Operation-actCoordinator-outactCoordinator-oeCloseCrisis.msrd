@@ -28,6 +28,8 @@ icrash.environment.actCoordinator.outactCoordinator.oeCloseCrisis
 "all the alert instances associated to this crisis do not belong any more to the system's post state."
 @postF
 "the coordinator actor is informed about the satisfaction of its request."
+@postF
+"an update of coordinator status and coordinator timing statistic for all administrators"
 @endPostF
 
 //postProtocol descriptions

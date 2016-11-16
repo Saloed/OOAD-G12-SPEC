@@ -28,11 +28,11 @@ icrash.environment.actAuthenticated.outactAuthenticated.oeUpdateBio.AdtBiometric
 @endPreF
 //postFunctional descriptions
 @postF 
-" "
+"a bio update confirmation message is sent to the actor"
 @endPostF
 //postProtocol descriptions
 @postP 
-" "
+"the biometric information of current actor is updated ! (i.e. new value of field 'bio' in the associated ctAuthenticated instance) "
 @endPostP
 //example
-@example"the biometric information of current actor is updated ! (i.e. new value of field 'bio' in the associated ctAuthenticated instance) "
+@example ""

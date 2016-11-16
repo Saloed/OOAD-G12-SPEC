@@ -1,0 +1,10 @@
+/*
+@author admin
+@date Thu Nov 17 01:40:21 MSK 2016
+*/
+
+
+@@view uci-uciugSecurelyUseSystemBio
+@instance Use-Case usecases.uciugSecurelyUseSystemBio.uciugSecurelyUseSystemBio 
+@description "login via biometric information"
+@caption ""

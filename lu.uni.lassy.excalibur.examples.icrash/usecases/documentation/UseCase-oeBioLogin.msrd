@@ -1,0 +1,27 @@
+/*
+@author admin
+@date Thu Nov 17 01:03:59 MSK 2016
+*/
+
+
+@@Use Case Subfunction icrash.usecases.subfunctions.oeBioLogin
+@description "goal login to the system via login and biometric information"
+@parameter icrash.usecases.subfunctions.oeBioLogin.AdtLogin ""
+@parameter icrash.usecases.subfunctions.oeBioLogin.AdtBiometric ""
+@endParameters
+@protocolCondition
+"
+"
+@endProtocolConditions
+@preCondition
+"
+"
+@endPreConditions
+@postCondition
+"
+"
+@endPostConditions
+@additionalInformation
+"
+none
+"

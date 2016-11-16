@@ -1,0 +1,8 @@
+/*
+@author admin
+@date Thu Nov 17 01:29:50 MSK 2016
+*/
+
+
+@@Instance Use Case usecases.uciugSecurelyUseSystemBio.uciugSecurelyUseSystemBio
+@description "use case for using biometric information for login operation"

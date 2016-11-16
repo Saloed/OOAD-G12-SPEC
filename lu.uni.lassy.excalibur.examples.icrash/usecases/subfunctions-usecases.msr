@@ -149,6 +149,13 @@ import icrash.environment
       ieMessage(AMessage) returned to actCoordinator
     }
   }
-  }
+  use case system subfunction sfUpdateTimingStatistic() {
+			actor actCoordinator[primary, active]
+			actor actAdministrator[secondary,passive]
+    returned messages {
+      ieTimeStatisticUpdated(ACoordStatistic) returned to actAdministrator
+    }
+		}
+	}
 
 }

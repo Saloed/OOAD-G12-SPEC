@@ -446,6 +446,12 @@
   <semanticResources>operations/environment/environment-actAuthenticated-oeBioLogin.msr</semanticResources>
   <semanticResources>concepts/documentation/Operation-dtCoordStatistic-is.msrd</semanticResources>
   <semanticResources>environment/documentation/Operation-actAuthenticated-outactAuthenticated-oeUpdateBio.msrd</semanticResources>
+  <semanticResources>usecases/documentation/UseCase-oeBioLogin.msrd</semanticResources>
+  <semanticResources>usecases/documentation/UseCase-oeUpdateBio.msrd</semanticResources>
+  <semanticResources>usecases/documentation/UseCase-sfUpdateTimingStatistic.msrd</semanticResources>
+  <semanticResources>usecases/usecaseinstance-ugSecurelyUseSystem-uciugSecurelyUseSystemBio.msr</semanticResources>
+  <semanticResources>usecases/documentation/UseCaseInstance-uciugSecurelyUseSystemBio.msrd</semanticResources>
+  <semanticResources>documentation/View-uci-uciugSecurelyUseSystemBio.msrd</semanticResources>
   <ownedViews xmi:type="viewpoint:DView" xmi:id="_UmILAPWqEeSOM9Kfym77Zg">
     <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/lu.uni.lassy.excalibur.ui.viewer/description/excalibur_models.odesign#//@ownedViewpoints[name='msr-viewpoint']"/>
   </ownedViews>
