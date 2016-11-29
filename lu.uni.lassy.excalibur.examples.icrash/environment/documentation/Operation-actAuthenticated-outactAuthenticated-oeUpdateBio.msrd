@@ -13,6 +13,10 @@ icrash.environment.actAuthenticated.outactAuthenticated.oeUpdateBio.AdtLogin
 @parameter
 icrash.environment.actAuthenticated.outactAuthenticated.oeUpdateBio.AdtBiometric
 "new biometric information of actor"
+@parameter icrash.operations.environment.actAuthenticated.operationmodel.icrash.environment.actAuthenticated.outactAuthenticated.oeUpdateBio.AdtLogin
+" "
+@parameter icrash.operations.environment.actAuthenticated.operationmodel.icrash.environment.actAuthenticated.outactAuthenticated.oeUpdateBio.AdtBiometric
+" "
 @endParameters
 
 @description "updates biometric information for current actor "

@@ -6,8 +6,8 @@
 
 @@Use Case Subfunction icrash.usecases.subfunctions.oeUpdateBio
 @description "goal update biometric information of actAuthenticated"
-@parameter icrash.usecases.subfunctions.oeUpdateBio.AdtLogin ""
-@parameter icrash.usecases.subfunctions.oeUpdateBio.AdtBiometric ""
+@parameter icrash.usecases.subfunctions.oeUpdateBio.AdtLogin "The login of actAuthenticatd"
+@parameter icrash.usecases.subfunctions.oeUpdateBio.AdtBiometric "Biometric information of actAuthenticated"
 @endParameters
 @protocolCondition
 "

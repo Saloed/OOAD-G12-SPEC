@@ -9,13 +9,13 @@ package icrash.usecases.ugAdministrateTheSystem {
 		use case system usergoal 
 		  ugAdministrateTheSystem() {
 			actor actAdministrator[primary,active]
-			actor actCoordinator[primary,active]
+			actor actActivator[primary,proactive]
 			
 			
 			reuse ugSecurelyUseSystem[1..*]
 			reuse oeAddCoordinator[1..*]
 			reuse oeDeleteCoordinator[0..*]
-			reuse sfUpdateTimingStatistic[1..*]
+			reuse oeUpdateTimingStatistic[1..*]
 			
 			step a: actAdministrator 
 			     executes ugSecurelyUseSystem
@@ -23,8 +23,8 @@ package icrash.usecases.ugAdministrateTheSystem {
 			     executes oeAddCoordinator
 			step c: actAdministrator
 			     executes oeDeleteCoordinator
-			step d: actCoordinator 
-				executes sfUpdateTimingStatistic
+			step d: actActivator 
+				executes oeUpdateTimingStatistic
 			
 			
 			ordering constraint 

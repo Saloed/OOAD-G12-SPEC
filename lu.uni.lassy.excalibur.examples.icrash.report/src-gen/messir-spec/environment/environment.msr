@@ -28,7 +28,7 @@ import lu.uni.lassy.messir.libraries.calendar
 			operation init():ptBoolean
 
 			output interface outactAdministrator{
-				
+								
 				operation oeAddCoordinator(
 											AdtCoordinatorID:dtCoordinatorID ,
 											AdtLogin:dtLogin , 
@@ -39,7 +39,7 @@ import lu.uni.lassy.messir.libraries.calendar
 			}
 			
 			input interface inactAdministrator{
-				
+				operation ieTimeStatisticUpdated(AdtCoordStatistic: dtCoordStatistic):ptBoolean
 				operation ieCoordinatorAdded():ptBoolean
 				operation ieCoordinatorDeleted():ptBoolean
 	 		}
@@ -107,6 +107,8 @@ import lu.uni.lassy.messir.libraries.calendar
 
 			output interface outactAuthenticated{
 				operation oeLogin(AdtLogin:dtLogin , AdtPassword:dtPassword ):ptBoolean
+				operation oeBioLogin(AdtLogin:dtLogin,AdtBiometric:dtBiometric) : ptBoolean
+				operation oeUpdateBio(AdtLogin:dtLogin,AdtBiometric:dtBiometric) : ptBoolean
 				operation oeLogout():ptBoolean
 			}
 			
@@ -122,6 +124,7 @@ import lu.uni.lassy.messir.libraries.calendar
 			output interface outactActivator{
 				proactive operation oeSollicitateCrisisHandling():ptBoolean
 				proactive operation oeSetClock(AcurrentClock:dtDateAndTime ):ptBoolean
+				proactive operation oeUpdateTimingStatistic(ACoordStatistic:dtCoordStatistic):ptBoolean
 			}
 			
 			input interface inactActivator{

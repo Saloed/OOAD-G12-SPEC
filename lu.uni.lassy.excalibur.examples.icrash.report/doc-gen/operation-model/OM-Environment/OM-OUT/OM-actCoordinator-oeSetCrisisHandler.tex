@@ -27,6 +27,7 @@ The \msrcode{oeSetCrisisHandler} operation has the following properties:
 	\addnumberedsinglerow{PostF}{All the alerts related to this crisis are sent to the actor such that he can decide how to handle them.}
 	\addnumberedsinglerow{PostF}{if the crisis was already handled at pre-sate then the associated handler actor is notified about the change of handler for one of his crisis (n.b. it might be the same even if not relevant).}
 	\addnumberedsinglerow{PostF}{a message is sent to the communication company for any human related to an alert associated to the crisis. A human will receive as many messages as alerts he sent despite the fact that they might relate to the same crisis (i.e. one alert, one acknoledgement).}
+	\addnumberedsinglerow{PostF}{an update of coordinator status and coordinator timing statistic for all administrators}
 
 	\addrowheading{Post-Condition (protocol)}
 	\addnumberedsinglerow{PostP}{ none}
@@ -34,6 +35,26 @@ The \msrcode{oeSetCrisisHandler} operation has the following properties:
 
 
 
+	% ------------------------------------------
+	% MCL Listing
+	% ------------------------------------------
+	\vspace{1cm}
+	The listing~\ref{OM-actCoordinator-oeSetCrisisHandler-MCL-LST} provides the \msrmessir (MCL-oriented) specification of the operation.
+	
+	\scriptsize
+	\vspace{0.5cm}
+	\begin{lstlisting}[style=MessirStyle,firstnumber=auto,captionpos=b,caption={\msrmessir (MCL-oriented) specification of the operation \emph{oeSetCrisisHandler}.},label=OM-actCoordinator-oeSetCrisisHandler-MCL-LST]
+
+	
+	
+	/* Post Functional:*/ 
+	postF{let TheSystem:ctState in
+	let AcoordStatisticUpdate: dtCoordStatistic in
+	TheSystem.rnactAdministrator.rnInterfaceIN ^ieTimeStatisticUpdated(AcoordStatisticUpdate)}
+	
+	
+	\end{lstlisting}
+	\normalsize 
 	
 	
 	

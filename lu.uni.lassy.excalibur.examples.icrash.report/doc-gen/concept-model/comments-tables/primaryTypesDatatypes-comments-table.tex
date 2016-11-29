@@ -13,12 +13,20 @@ The table below is providing comments on the graphical views given for the datat
 \adddoublerow{dtAlertID}{ A string used to identify alerts.}
 \addsingletwocolumnrow{extends}{dtString}
 \adddoubletwocolumnrow{operation}{\msrcode{is():ptBoolean}}{used to determine which strings are considered as valid alert identifiers.}
+\adddoublerow{dtBiometric}{a data type using to store user biometric information}
+\addsingletwocolumnrow{extends}{dtInteger}
+\adddoubletwocolumnrow{operation}{\msrcode{is():ptBoolean}}{determine validity of biometric information}
 \adddoublerow{dtComment}{a datatype made of a string value used to receive,store and send textual information about crisis and alerts.}
 \addsingletwocolumnrow{extends}{dtString}
 \adddoubletwocolumnrow{operation}{\msrcode{is():ptBoolean}}{used to determine which strings are considered as valid comments.}
 \adddoublerow{dtCoordinatorID}{A string used to identify coordinators.}
 \addsingletwocolumnrow{extends}{dtString}
 \adddoubletwocolumnrow{operation}{\msrcode{is():ptBoolean}}{used to determine which strings are considered as valid coordinators identifiers.}
+\adddoublerow{dtCoordStatistic}{store coordinator timing statistic}
+\adddoubletwocolumnrow{attribute}{\msrcode{coordId: dtCoordinatorID}}{Id of the coordinator}
+\adddoubletwocolumnrow{attribute}{\msrcode{coordState: ptString}}{State of the coordinator (free,handle...)}
+\adddoubletwocolumnrow{attribute}{\msrcode{coordTime: dtTime}}{Time of the last coordinator's state change}
+\adddoubletwocolumnrow{operation}{\msrcode{is():ptBoolean}}{determine validity of coordinator timing statistic}
 \adddoublerow{dtCrisisID}{ A string used to identify crisis.}
 \addsingletwocolumnrow{extends}{dtString}
 \adddoubletwocolumnrow{operation}{\msrcode{is():ptBoolean}}{used to determine which strings are considered as valid crisis identifiers.}

@@ -12,7 +12,7 @@ package icrash.concepts.primarytypes.datatypes {
 			datatype dtCrisisID extends dtString {
 				operation is():ptBoolean
 			}
-			datatype dtBiometric {
+			datatype dtBiometric extends dtInteger {
 				operation is():ptBoolean
 			}
 			datatype dtLogin extends dtString {

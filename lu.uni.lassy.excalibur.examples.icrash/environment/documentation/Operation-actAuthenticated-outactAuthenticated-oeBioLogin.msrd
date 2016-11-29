@@ -13,6 +13,10 @@ icrash.environment.actAuthenticated.outactAuthenticated.oeBioLogin.AdtLogin
 @parameter
 icrash.environment.actAuthenticated.outactAuthenticated.oeBioLogin.AdtBiometric
 "biometric information used to determine accessibility rights for the actual actor."
+@parameter icrash.operations.environment.actAuthenticated.operationmodel.icrash.environment.actAuthenticated.outactAuthenticated.oeBioLogin.AdtLogin
+" "
+@parameter icrash.operations.environment.actAuthenticated.operationmodel.icrash.environment.actAuthenticated.outactAuthenticated.oeBioLogin.AdtBiometric
+" "
 @endParameters
 
 @description "sent to request authorization to request access secured system operations using biometric information as password. "

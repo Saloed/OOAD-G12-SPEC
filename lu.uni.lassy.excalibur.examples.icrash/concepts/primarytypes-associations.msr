@@ -10,7 +10,6 @@ import lu.uni.lassy.messir.libraries.primitives
 		Primary Types{
 
 // Internal
-
 association assctAlertctCrisis
 	ctAlert(rnAlerts)[1..*]
 	ctCrisis (rnTheCrisis)[1..1]
@@ -23,6 +22,7 @@ association assctCrisisctCoordinator
 	ctCrisis(rnHandled)[0..*]
 	ctCoordinator(rnHandler)[0..1]
 	
+
 // With Actors
 
  		association assctHumanactComCompany 

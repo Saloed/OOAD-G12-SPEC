@@ -1,18 +1,18 @@
 package icrash.concepts.primarytypes.datatypes {
-
-import lu.uni.lassy.messir.libraries.primitives
-import lu.uni.lassy.messir.libraries.string
-import lu.uni.lassy.messir.libraries.math
-import lu.uni.lassy.messir.libraries.calendar
+	import lu.uni.lassy.messir.libraries.primitives
+	import lu.uni.lassy.messir.libraries.string
+	import lu.uni.lassy.messir.libraries.math
+	import lu.uni.lassy.messir.libraries.calendar
 
 	Concept Model {
-		
 		Primary Types {
-   
-			 datatype dtAlertID extends dtString {
+			datatype dtAlertID extends dtString {
 				operation is():ptBoolean
 			}
 			datatype dtCrisisID extends dtString {
+				operation is():ptBoolean
+			}
+			datatype dtBiometric extends dtInteger {
 				operation is():ptBoolean
 			}
 			datatype dtLogin extends dtString {
@@ -28,23 +28,28 @@ import lu.uni.lassy.messir.libraries.calendar
 				operation is():ptBoolean
 			}
 			datatype dtComment extends dtString {
-				operation is():ptBoolean			
+				operation is():ptBoolean
 			}
 			datatype dtLatitude extends dtReal {
-				operation is():ptBoolean			
+				operation is():ptBoolean
 			}
 			datatype dtLongitude extends dtReal {
-				operation is():ptBoolean			
+				operation is():ptBoolean
+			}
+			datatype dtCoordStatistic {
+				attribute coordId:dtCoordinatorID
+				attribute coordState:ptString
+				attribute coordTime:dtTime
+				operation is():ptBoolean
 			}
 			datatype dtGPSLocation {
-				attribute latitude: dtLatitude 
-				attribute longitude: dtLongitude
-				operation is():ptBoolean			
-				operation isNearTo(AGPSLocation:dtGPSLocation ):ptBoolean
+				attribute latitude:dtLatitude
+				attribute longitude:dtLongitude
+				operation is():ptBoolean
+				operation isNearTo(AGPSLocation:dtGPSLocation):ptBoolean
 			}
-			
 			enum etCrisisStatus {
-				constants["pending", "handled", "solved","closed"]
+				constants["pending", "handled", "solved", "closed"]
 				operation is():ptBoolean
 			}
 			enum etAlertStatus {

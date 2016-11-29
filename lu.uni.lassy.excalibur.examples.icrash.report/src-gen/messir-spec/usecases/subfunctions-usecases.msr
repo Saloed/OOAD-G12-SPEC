@@ -86,6 +86,20 @@ import icrash.environment
         returned to actComCompany
     }
   }    
+  //----------------------------------------------------
+  use case system subfunction oeUpdateBio(AdtLogin:dtLogin,AdtBiometric:dtBiometric) {
+    actor actAuthenticated[primary,active]
+    returned messages {
+      ieMessage(AMessage) returned to actAuthenticated
+	  }
+  }  
+  //----------------------------------------------------
+  use case system subfunction oeBioLogin(AdtLogin:dtLogin , AdtBiometric:dtBiometric) {
+    actor actAuthenticated[primary,active]
+    returned messages {
+      ieMessage(AMessage) returned to actAuthenticated
+	  }
+  }  
 //----------------------------------------------------
   use case system subfunction oeLogin(AdtLogin:dtLogin , AdtPassword:dtPassword) {
     actor actAuthenticated[primary,active]
@@ -135,6 +149,13 @@ import icrash.environment
       ieMessage(AMessage) returned to actCoordinator
     }
   }
-  }
+  use case system subfunction oeUpdateTimingStatistic(ACoordStatistic:dtCoordStatistic) {
+			actor actActivator[primary, proactive]
+			actor actAdministrator[secondary,passive]
+    returned messages {
+      ieTimeStatisticUpdated(ACoordStatistic) returned to actAdministrator
+    }
+		}
+	}
 
 }

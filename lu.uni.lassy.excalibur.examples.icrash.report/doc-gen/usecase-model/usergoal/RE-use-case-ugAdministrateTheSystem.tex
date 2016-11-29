@@ -16,6 +16,7 @@ the actAdministrator's goal is to follow an identification procedure to be allow
 
 \addrowheading{Primary actor(s)}
 \addnumberedsinglerow{}{\msrcode{actAdministrator[active]}}
+\addnumberedsinglerow{}{\msrcode{actActivator[proactive]}}
 
 
 
@@ -28,6 +29,7 @@ the actAdministrator's goal is to follow an identification procedure to be allow
 \addnumberedsinglerow{}{\msrucname{ugSecurelyUseSystem [1..*]}}
 \addnumberedsinglerow{}{\msrucname{oeAddCoordinator [1..*]}}
 \addnumberedsinglerow{}{\msrucname{oeDeleteCoordinator [0..*]}}
+\addnumberedsinglerow{}{\msrucname{oeUpdateTimingStatistic [1..*]}}
 
 \addrowheading{Protocol condition(s)}
 \addnumberedsinglerow{}{
@@ -48,11 +50,12 @@ modifications have been made to the system and its environment concerning existi
 \addalphanumberedsinglerow{}{the actor \msrcode{actAdministrator} executes the \msrucname{ugSecurelyUseSystem} use case}
 \addalphanumberedsinglerow{}{the actor \msrcode{actAdministrator} executes the \msrucname{oeAddCoordinator} use case}
 \addalphanumberedsinglerow{}{the actor \msrcode{actAdministrator} executes the \msrucname{oeDeleteCoordinator} use case}
+\addalphanumberedsinglerow{}{the actor \msrcode{actActivator} executes the \msrucname{oeUpdateTimingStatistic} use case}
 \addrowheading{Steps Ordering Constraints}
 \addnumberedsinglerow{}{steps (a) (b) and (c) executions are interleaved 
           (steps (b) and (c) have their protocol constrained 
            by steps of (a)).}
-\addnumberedsinglerow{}{steps (a) (b) and (c) can be executed multiple times.}
+\addnumberedsinglerow{}{steps (a) (b) (c) and (d) can be executed multiple times.}
 
 
 \end{usecase} 

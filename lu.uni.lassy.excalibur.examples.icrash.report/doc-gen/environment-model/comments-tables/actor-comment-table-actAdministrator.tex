@@ -12,6 +12,9 @@
 	
 	
 	
+	\addrowheading{Operations}
+	\adddoublerow{\msrcode{init():ptBoolean}}{ }
+	
 	
 
 	\addrowheading{OutputInterfaces}
@@ -24,8 +27,10 @@
 	
 	\addrowheading{InputInterfaces}
 	\addnumbereddoublerow{IN}{\msrcode{ieCoordinatorAdded():ptBoolean}}
-							 {its reception confirms the creation of the requested coodinator. }
+							 {its reception confirms the creation of the requested coordinator. }
 	\addnumbereddoublerow{IN}{\msrcode{ieCoordinatorDeleted():ptBoolean}}
-							 {its reception confirms the deletion of the requested coodinator. }
+							 {its reception confirms the deletion of the requested coordinator. }
+	\addnumbereddoublerow{IN}{\msrcode{ieTimeStatisticUpdated(AdtCoordStatistic:dtCoordStatistic):ptBoolean}}
+							 {its reception confirms the update of coordinators timing statistic}
 	
 \end{actortable}
