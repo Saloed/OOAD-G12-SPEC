@@ -1,0 +1,25 @@
+
+/*
+* @author admin
+* @date Tue Nov 15 09:59:13 MSK 2016
+*/
+package icrash.operations.concepts.primarytypes.datatypes.dtCoordStatistic {
+	import lu.uni.lassy.messir.libraries.primitives
+
+	Operation Model {
+
+		operation: icrash.concepts.primarytypes.datatypes.dtCoordStatistic.is():ptBoolean {
+			postF {
+				let TheResult:ptBoolean in(if(AdtValue.coordId.is() and(AdtValue.coordTime.hour.value.geq(0) or AdtValue.coordTime.minute.value.geq(0) or AdtValue.coordTime.second.value.geq(0)))
+				then(TheResult = true)
+				else(TheResult = false)
+				endif result = TheResult)
+
+	}
+	prolog {
+		"src/Operations/Concepts/PrimaryTypesDatatypes/PrimaryTypesDatatypes-dtCoordStatistic-is.pl"
+	}
+}
+
+}
+}

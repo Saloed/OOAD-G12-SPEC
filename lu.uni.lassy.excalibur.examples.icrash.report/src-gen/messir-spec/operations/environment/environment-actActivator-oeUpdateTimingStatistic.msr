@@ -1,0 +1,42 @@
+package icrash.environment.operations.actActivator.outactActivator.oeUpdateTimingStatistic {
+
+import lu.uni.lassy.messir.libraries.primitives
+import lu.uni.lassy.messir.libraries.math
+import lu.uni.lassy.messir.libraries.string
+import lu.uni.lassy.messir.libraries.calendar
+import icrash.concepts.primarytypes.datatypes
+import icrash.concepts.primarytypes.classes
+
+
+	Operation Model {
+
+		operation: icrash.environment.actActivator.outactActivator.oeUpdateTimingStatistic(ACoordStatistic:dtCoordStatistic):ptBoolean{
+preP{
+   let TheSystem: ctState in
+  let AvpStarted: ptBoolean in
+  
+/* PreP01 */
+  self.rnActor.rnSystem = TheSystem
+  and self.rnActor.rnSystem.vpStarted = AvpStarted
+  and AvpStarted = true
+}
+preF{true}
+
+postF{
+  let TheSystem: ctState in
+  self.rnActor.rnSystem = TheSystem
+
+ TheSystem.rnactAdministrator.rnInterfaceIN^ieTimeStatisticUpdated(ACoordStatistic)
+                
+}
+postP{
+  let TheSystem: ctState in
+  let TheClock: dtDateAndTime in
+  
+  self.rnActor.rnSystem = TheSystem
+  and TheSystem.clock = TheClock
+  and TheSystem@post.vpLastReminder = TheClock
+}
+		}
+	}
+}

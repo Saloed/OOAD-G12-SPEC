@@ -1,0 +1,80 @@
+\subsection{Operation Model for oeUpdateTimingStatistic}
+
+\label{OM-oeUpdateTimingStatistic}
+
+
+The \msrcode{oeUpdateTimingStatistic} operation has the following properties:
+
+	\begin{operationmodel}
+	\addheading{Operation}
+	\adddoublerow{oeUpdateTimingStatistic[proactive]}{A proactive (automatically triggered) message used to update coordinator timing statistic for administrator}
+
+	\addrowheading{Parameters}
+	\addnumbereddoublerow{}{ACoordStatistic: dtCoordStatistic}{A new coordinators timing statistic} 
+	\addnumbereddoublerow{}{ACoordStatistic: dtCoordStatistic}{ } 
+
+	\addrowheading{Return type}
+	\addsinglerow{ptBoolean}
+
+	\addrowheading{Pre-Condition (protocol)}
+	\addnumberedsinglerow{PreP}{the system is started}
+		
+	\addrowheading{Pre-Condition (functional)}
+	\addnumberedsinglerow{PreF}{ }
+
+	\addrowheading{Post-Condition (functional)}
+	\addnumberedsinglerow{PostF}{Send message with new coordinator timing statistic to the administrator}
+
+	\addrowheading{Post-Condition (protocol)}
+	\addnumberedsinglerow{PostP}{the value of the last reminder known by the system at post state is the system's clock value.}
+	\end{operationmodel}
+
+
+
+	% ------------------------------------------
+	% MCL Listing
+	% ------------------------------------------
+	\vspace{1cm}
+	The listing~\ref{OM-actActivator-oeUpdateTimingStatistic-MCL-LST} provides the \msrmessir (MCL-oriented) specification of the operation.
+	
+	\scriptsize
+	\vspace{0.5cm}
+	\begin{lstlisting}[style=MessirStyle,firstnumber=auto,captionpos=b,caption={\msrmessir (MCL-oriented) specification of the operation \emph{oeUpdateTimingStatistic}.},label=OM-actActivator-oeUpdateTimingStatistic-MCL-LST]
+
+	/* Pre Protocol:*/ 
+	preP{let TheSystem: ctState in
+	  let AvpStarted: ptBoolean in
+	  
+	/* PreP01 */
+	  self.rnActor.rnSystem = TheSystem
+	  and self.rnActor.rnSystem.vpStarted = AvpStarted
+	  and AvpStarted = true}
+	
+	/* Pre Functional:*/
+	preF{true}
+	
+	/* Post Functional:*/ 
+	postF{let TheSystem: ctState in
+	  self.rnActor.rnSystem = TheSystem
+	
+	 TheSystem.rnactAdministrator.rnInterfaceIN^ieTimeStatisticUpdated(ACoordStatistic)}
+	
+	/* Post Protocol:*/ 
+	postP{ let TheSystem: ctState in
+	  let TheClock: dtDateAndTime in
+	  
+	  self.rnActor.rnSystem = TheSystem
+	  and TheSystem.clock = TheClock
+	  and TheSystem@post.vpLastReminder = TheClock}
+	
+	\end{lstlisting}
+	\normalsize 
+	
+	
+	
+	
+
+
+
+
+
