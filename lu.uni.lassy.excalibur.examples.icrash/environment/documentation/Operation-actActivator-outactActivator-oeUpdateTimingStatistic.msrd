@@ -1,0 +1,36 @@
+/*
+@author admin
+@date Tue Nov 29 13:55:05 MSK 2016
+*/
+
+
+@@Operation
+icrash.environment.actActivator.outactActivator.oeUpdateTimingStatistic
+//parameters
+@parameter
+icrash.environment.actActivator.outactActivator.oeUpdateTimingStatistic.ACoordStatistic
+"A new coordinators timing statistic"
+@parameter icrash.environment.operations.actActivator.outactActivator.oeUpdateTimingStatistic.operationmodel.icrash.environment.actActivator.outactActivator.oeUpdateTimingStatistic.ACoordStatistic
+" "
+@endParameters
+
+@description "A proactive (automatically triggered) message used to update coordinator timing statistic for administrator"
+
+//preProtocol descriptions
+@preP
+"the system is started"
+@endPreP
+//preFunctional descriptions
+@preF
+" "
+@endPreF
+//postFunctional descriptions
+@postF 
+"Send message with new coordinator timing statistic to the administrator"
+@endPostF
+//postProtocol descriptions
+@postP 
+"the value of the last reminder known by the system at post state is the system's clock value."
+@endPostP
+//example
+@example" "

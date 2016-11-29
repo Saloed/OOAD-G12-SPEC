@@ -1,0 +1,27 @@
+/*
+@author admin
+@date Tue Nov 29 14:03:47 MSK 2016
+*/
+
+
+@@Use Case Subfunction icrash.usecases.subfunctions.oeUpdateTimingStatistic
+@description "Updates coordinators timing statistic for administrator"
+@parameter icrash.usecases.subfunctions.oeUpdateTimingStatistic.ACoordStatistic "
+New coordinator timing statistic to be sent"
+@endParameters
+@protocolCondition
+"
+"
+@endProtocolConditions
+@preCondition
+"
+"
+@endPreConditions
+@postCondition
+"
+"
+@endPostConditions
+@additionalInformation
+"
+none
+"
