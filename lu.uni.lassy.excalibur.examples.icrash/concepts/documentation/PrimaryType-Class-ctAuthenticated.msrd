@@ -12,8 +12,6 @@
 @attribute icrash.concepts.primarytypes.classes.ctAuthenticated.vpIsLogged
 "used to determine the access status."
 
-@attribute icrash.concepts.primarytypes.classes.ctAuthenticated.bio
-"a biometric information for authentication"
 @endAttributes
 
 @operation icrash.concepts.primarytypes.classes.ctAuthenticated.init

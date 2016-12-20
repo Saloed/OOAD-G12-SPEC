@@ -26,9 +26,7 @@ the actAdministrator's goal is to follow an identification procedure to be allow
 
 \addrowheading{Reuse}
 \addnumberedsinglerow{}{\msrucname{oeLogin [1..1]}}
-\addnumberedsinglerow{}{\msrucname{oeBioLogin [1..1]}}
 \addnumberedsinglerow{}{\msrucname{oeLogout [1..1]}}
-\addnumberedsinglerow{}{\msrucname{oeUpdateBio [1..*]}}
 
 \addrowheading{Protocol condition(s)}
 \addnumberedsinglerow{}{
@@ -47,13 +45,9 @@ the actAuthenticated is known by the system not to be logged.
 
 \addrowheading{Main Steps}
 \addalphanumberedsinglerow{}{the actor \msrcode{actAuthenticated} executes the \msrucname{oeLogin} use case}
-\addalphanumberedsinglerow{}{the actor \msrcode{actAuthenticated} executes the \msrucname{oeBioLogin} use case}
-\addalphanumberedsinglerow{}{the actor \msrcode{actAuthenticated} executes the \msrucname{oeUpdateBio} use case}
 \addalphanumberedsinglerow{}{the actor \msrcode{actAuthenticated} executes the \msrucname{oeLogout} use case}
 \addrowheading{Steps Ordering Constraints}
-\addnumberedsinglerow{}{step (a1) or (a2) must always precede step (c).}
-\addnumberedsinglerow{}{step (a1) or (a2) must always precede step (b).}
-\addnumberedsinglerow{}{step (b) can be executed multiple times.}
+\addnumberedsinglerow{}{step (a1)  must always precede step (c).}
 
 
 \end{usecase} 

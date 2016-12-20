@@ -15,10 +15,6 @@
 //output events
 @outputEvent icrash.environment.actAuthenticated.outactAuthenticated.oeLogin
 "sent to request authorization to request access secured system operations."
-@outputEvent icrash.environment.actAuthenticated.outactAuthenticated.oeBioLogin 
-"sent request to access secured system operations using biometric information as password"
 @outputEvent icrash.environment.actAuthenticated.outactAuthenticated.oeLogout
 "sent to end the secured access to specific system operations."
-@outputEvent icrash.environment.actAuthenticated.outactAuthenticated.oeUpdateBio
-"sent request to update actor's biometric information"
 @endOutputEvents

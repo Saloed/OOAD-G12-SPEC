@@ -33,4 +33,8 @@
 @outputEvent icrash.environment.actCoordinator.outactCoordinator.oeValidateAlert
 "sent to indicate that a specific alert is not a fake."
 
+@outputEvent icrash.environment.actCoordinator.outactCoordinator.oeBioLogin
+"sent request to access secured system operations using biometric information as password"
+@outputEvent icrash.environment.actCoordinator.outactCoordinator.oeUpdateBio
+"sent request to update actor's biometric information"
 @endOutputEvents

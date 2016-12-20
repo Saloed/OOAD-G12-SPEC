@@ -53,6 +53,8 @@ import lu.uni.lassy.messir.libraries.calendar
 			operation init():ptBoolean
 
 			output interface outactCoordinator{
+			    operation oeBioLogin(AdtLogin:dtLogin,AdtBiometric:dtBiometric) : ptBoolean
+				operation oeUpdateBio(AdtLogin:dtLogin,AdtBiometric:dtBiometric) : ptBoolean
 				operation oeInvalidateAlert(AdtAlertID:dtAlertID ):ptBoolean
 				operation oeCloseCrisis(AdtCrisisID:dtCrisisID ):ptBoolean
 				operation oeGetAlertsSet(AetAlertStatus:etAlertStatus ):ptBoolean
@@ -107,8 +109,6 @@ import lu.uni.lassy.messir.libraries.calendar
 
 			output interface outactAuthenticated{
 				operation oeLogin(AdtLogin:dtLogin , AdtPassword:dtPassword ):ptBoolean
-				operation oeBioLogin(AdtLogin:dtLogin,AdtBiometric:dtBiometric) : ptBoolean
-				operation oeUpdateBio(AdtLogin:dtLogin,AdtBiometric:dtBiometric) : ptBoolean
 				operation oeLogout():ptBoolean
 			}
 			

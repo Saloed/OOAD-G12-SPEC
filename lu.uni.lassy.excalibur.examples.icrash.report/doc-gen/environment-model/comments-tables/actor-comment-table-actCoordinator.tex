@@ -45,6 +45,12 @@
 	\addnumbereddoublerow{OUT}{\hypertarget{actCoordinator.outactCoordinator.oeValidateAlert}
 			{\msrcode{oeValidateAlert(AdtAlertID:dtAlertID):ptBoolean}}}
 			{sent to indicate that a specific alert is not a fake.}
+	\addnumbereddoublerow{OUT}{\hypertarget{actCoordinator.outactCoordinator.oeBioLogin}
+			{\msrcode{oeBioLogin(AdtLogin:dtLogin, AdtBiometric:dtBiometric):ptBoolean}}}
+			{sent request to access secured system operations using biometric information as password}
+	\addnumbereddoublerow{OUT}{\hypertarget{actCoordinator.outactCoordinator.oeUpdateBio}
+			{\msrcode{oeUpdateBio(AdtLogin:dtLogin, AdtBiometric:dtBiometric):ptBoolean}}}
+			{sent request to update actor's biometric information}
 	
 	\addrowheading{InputInterfaces}
 	\addnumbereddoublerow{IN}{\msrcode{ieSendAnAlert(ActAlert:ctAlert):ptBoolean}}

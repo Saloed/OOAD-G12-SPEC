@@ -1,6 +1,8 @@
 package usecases.uciugSecurelyUseSystemBio {
 	import icrash.usecases.ugSecurelyUseSystem
     import icrash.usecases.ugSecurelyUseSystem
+    
+	import lu.uni.lassy.excalibur.examples.icrash.usecases.ugBioSequrity.msr
     import icrash.concepts.primarytypes.datatypes
     import icrash.environment
     import icrash.usecases.suGlobalCrisisHandling
@@ -8,10 +10,10 @@ package usecases.uciugSecurelyUseSystemBio {
     import icrash.usecases.subfunctions
 	Use Case Model {
 
-		use case instance uciugSecurelyUseSystemBio : ugSecurelyUseSystem{
+		use case instance uciugSecurelyUseSystemBio : ugBioSequrity(){
 			//-----------------------------
       actors {
-        bill:actAuthenticated
+        bill:actCoordinator
       }
       use case steps {
 //-----------------------------
@@ -23,7 +25,7 @@ package usecases.uciugSecurelyUseSystemBio {
 //-----------------------------
         bill
         executed instanceof subfunction
-              oeUpdateBio("bill"){
+              oeUpdateBio("bill","12345"){
                 ieMessage('Your biometric information updated') returned to bill
               }
 //-----------------------------
@@ -36,7 +38,7 @@ package usecases.uciugSecurelyUseSystemBio {
               //-----------------------------
         bill
         executed instanceof subfunction
-              oeBioLogin("bill"){
+              oeBioLogin("bill","12345"){
                 ieMessage('You are logged ! Welcome ...') returned to bill
               }
       }

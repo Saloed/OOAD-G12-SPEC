@@ -85,7 +85,6 @@ import lu.uni.lassy.messir.libraries.calendar
 
 				attribute login:dtLogin
 				attribute pwd: dtPassword
-				attribute bio: dtBiometric
 				attribute vpIsLogged:ptBoolean
 				
 				operation init(
@@ -99,6 +98,7 @@ import lu.uni.lassy.messir.libraries.calendar
 					extends ctAuthenticated{
 			
 				attribute id:dtCoordinatorID
+				attribute bio: dtBiometric
 				
 				operation init(
 										Aid:dtCoordinatorID ,

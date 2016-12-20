@@ -88,16 +88,16 @@ import icrash.environment
   }    
   //----------------------------------------------------
   use case system subfunction oeUpdateBio(AdtLogin:dtLogin,AdtBiometric:dtBiometric) {
-    actor actAuthenticated[primary,active]
+    actor actCoordinator[primary,active]
     returned messages {
-      ieMessage(AMessage) returned to actAuthenticated
+      ieMessage(AMessage) returned to actCoordinator
 	  }
   }  
   //----------------------------------------------------
   use case system subfunction oeBioLogin(AdtLogin:dtLogin , AdtBiometric:dtBiometric) {
-    actor actAuthenticated[primary,active]
+    actor actCoordinator[primary,active]
     returned messages {
-      ieMessage(AMessage) returned to actAuthenticated
+      ieMessage(AMessage) returned to actCoordinator
 	  }
   }  
 //----------------------------------------------------
